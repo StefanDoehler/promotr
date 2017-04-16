@@ -1,0 +1,164 @@
+:root{
+    --main-blue: rgb(209,223,210);
+    --main-orange: rgb(253,173,84);
+    --color-teal: rgb(81,165,186);
+    --color-green: #298F00;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: var(--main-orange);
+}
+
+h1.app-name {
+	margin-left: 4px;
+	color: white;
+	font-size: 38px;
+	font-family: 'Indie Flower';
+}
+
+h2.main-header {
+	text-align: center;
+	margin: auto;
+	color: white;
+	font-size: 75px;
+	font-family: 'Indie Flower';
+	vertical-align: middle;
+}
+
+p.vp {
+	margin: auto;
+	text-align: center;
+	width: 42%;
+	min-width: 500px;
+	color: white;
+	font-size: 20px;
+	font-family: 'Asar';
+	vertical-align: middle;
+}
+
+.top-bar {
+	top-margin: 0px;
+	background-color: transparent;
+	height: 15%;
+	width: 100%;
+}
+
+.middle-table {
+	display: table;
+	background-color: transparent;
+	height: 75%;
+	width: 100%;
+}
+
+.middle-table-cell {
+	text-align: center;
+	height: 100%;
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.line {
+	background-color: var(--main-blue);
+	height: 3px;
+}
+
+#line-top {
+	width: 100%;
+}
+
+#line-middle-1 {
+	margin: 6px auto;
+	width: 75%;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+
+#line-middle-2 {
+	margin: 6px auto;
+	width: 70%;
+	border-radius: 3px;
+	vertical-align: middle;
+}
+
+#line-bottom-1 {
+	margin: 6px auto;
+	width: 100%;
+}
+
+#line-bottom-2 {
+	margin: 6px auto;
+	width: 100%;
+}
+
+.bottom-bar {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	background-color: transparent;
+	height: 10%;
+	width: 100%;
+}
+
+.buttons-table {
+	display: table;
+	margin: auto;
+	text-align: center;
+	height: 15%;
+	width: 100%;
+	vertical-align: middle
+}
+
+.buttons-cell {
+	display: table-cell;
+	height: 100%;
+	width: 100%;
+}
+
+.search {
+	height: 50px;
+	width: 200px;
+	margin: auto;
+	font-size: 30px;
+	font-family: 'Roboto';
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background-color: var(--color-green);
+	border-color: var(--color-green);
+	color: white;
+}
+
+.promote {
+	height: 50px;
+	width: 200px;
+	margin: auto;
+	margin-right: 150px;
+	font-size: 30px;
+	font-family: 'Roboto';
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	background-color: var(--color-teal);
+	border-color: var(--color-teal);
+	color: white;
+}
+
+.filler-1 {
+	background-color: transparent;
+	height: 10%;
+	width: 100%;
+}
+
+.filler-2 {
+	background-color: transparent;
+	height: 15%;
+	width: 100%;
+}
