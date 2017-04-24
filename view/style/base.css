@@ -1,0 +1,16 @@
+:root{
+    --main-blue: rgb(209,223,210);
+    --main-orange: rgb(253,173,84);
+    --color-teal: rgb(81,165,186);
+    --color-green: #298F00;
+}
+
+html {
+	height: 100%;
+	width: 100%;
+}
+
+.line {
+	background-color: var(--main-blue);
+	height: 3px;
+}
