@@ -2,6 +2,20 @@
 
 // based on http://stackoverflow.com/questions/17319395/node-js-pg-postgresql-and-insert-queries-app-hangs
 
+
+/**
+    Parse the group form the URL
+    @param url, string, the URL
+    @return int the numeric code for the group, or -1 if no group found
+*/
+function groupNo(url) {
+    var ret=-1;
+    if(url.length>=2) {
+        ret=parseInt(url[:-2]);
+    }
+    return ret;
+}
+
 /**
     Log a visitor to the site
     @param ipaddr, string, the IP adress of the user
@@ -38,4 +52,4 @@ function logUser(ipaddr, groupno, pageurl) {
     	}
     });
 
-};
+}
