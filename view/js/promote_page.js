@@ -11,8 +11,8 @@ $(document).ready(function()
 		if ($('.location-checkbox').prop('checked')) {
 			if (navigator.geolocation) {
     			navigator.geolocation.getCurrentPosition(function(position) {
-					location.lat = position.coords.latitude;
-					location.lon = position.coords.longitude;
+					lat = position.coords.latitude;
+					lon = position.coords.longitude;
     			}, error, {timeout: 5000});
 			} 
 			else {
@@ -20,26 +20,34 @@ $(document).ready(function()
     			return;
 			}
 
-			if (store_name && store_type && promotion_type && description && location) {
+			if (store_name && store_type && promotion_type && description) {
 				var params = {};
-				params['store_name'] = store_name;
-				params['store_type'] = store_type;
-				params['promotion_type'] = promotion_type;
-				params['description'] = description;
-				params['location'] = location;
-				console.log(location);
+				var url = window.location.href + '/submit';
+				params.store_name = store_name;
+				params.store_type = store_type;
+				params.promotion_type = promotion_type;
+				params.description = description;
+				params.lat = location.lat;
+				params.lon = location.lon;
+				post(url, params);
+				alert("Your promotion was entered!");
+				window.location = '/';
 			}
 		}
 		else {
 			getLatitudeLongitude(recordLatLon, address, location, function() {
-				if (store_name && store_type && promotion_type && description && location) {
+				if (store_name && store_type && promotion_type && description) {
 					var params = {};
-					params['store_name'] = store_name;
-					params['store_type'] = store_type;
-					params['promotion_type'] = promotion_type;
-					params['description'] = description;
-					params['location'] = location;
-					console.log(location);
+					var url = window.location.href + '/submit';
+					params.store_name = store_name;
+					params.store_type = store_type;
+					params.promotion_type = promotion_type;
+					params.description = description;
+					params.lat = location.lat;
+					params.lon = location.lon;
+					post(url, params);
+					alert("Your promotion was entered!");
+					window.location = '/'
 				}
 			});
 		}

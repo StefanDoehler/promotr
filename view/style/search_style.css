@@ -1,0 +1,22 @@
+body {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-color: var(--color-green);
+}
+
+.top-bar {
+	top-margin: 0px;
+	background-color: transparent;
+	height: 10%;
+	width: 100%;
+}
+
+.line {
+	background-color: var(--main-blue);
+	height: 3px;
+}
+
+#line-top {
+	width: 100%;
+}

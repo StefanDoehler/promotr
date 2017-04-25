@@ -24,7 +24,7 @@ app.get('/', navigateController.homepage);
 app.get('/promote', navigateController.promote);
 
 // add promotion to database
-app.post('/submit_promotion', promoteController.submit);
+app.post('/promote/submit', promoteController.submit);
 
 // search page
 app.get('/search', navigateController.search);
