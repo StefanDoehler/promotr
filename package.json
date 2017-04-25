@@ -1,7 +1,7 @@
 {
   "name": "promotr",
   "version": "1.0.0",
-  "description": "",
+  "description": "Promotr",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +13,14 @@
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "pg": "^6.1.5"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanDoehler/promotr.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StefanDoehler/promotr/issues"
+  },
+  "homepage": "https://github.com/StefanDoehler/promotr#readme"
 }
