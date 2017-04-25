@@ -2,13 +2,63 @@
 <html>
 	<head>
 		<link rel='stylesheet' type='text/css' href='reset.css'>
-		<link rel='stylesheet' type='text/css' href='styles.css'>
-		<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Oxygen'/>
+		<link rel='stylesheet' type='text/css' href='promote_style.css'>
+		<link rel='stylesheet' type='text/css' href='base.css'>
+		<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Roboto'/>
+		<link rel='stylesheet' type='text/css' href='//fonts.googleapis.com/css?family=Indie+Flower'/>
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 		<script src='https://maps.googleapis.com/maps/api/js?sensor=false'></script>
-		<script type='text/javascript' src='homepage.js'></script>
+		<script type='text/javascript' src='promote.js'></script>
 	</head>
 	<body>
-		<p>time to promote</p>
+		<div class='top-bar'>
+			<h1 class='app-name'>Promotr</h1>
+			<div class='line' id='line-top'></div>
+		</div>
+		<div class='middle-table'>
+			<div class='middle-table-cell'>
+				<h2 class='main-header'>Enter Your Promotion</h2>
+				<div class='line' id='line-middle-1'></div>
+				<div class='line' id='line-middle-2'></div>
+				<div class='filler-1'></div>
+				<div class='input-section'>
+					<div class='left-column'>
+						<p class='label-text'>Store Name</p>
+						<div class='filler-2'></div>
+						<input class='normal' id='store-name-input' type='text' maxlength='30'>
+						<div class='filler-1'></div>
+						<p class='label-text'>Store Type</p>
+						<div class='filler-2'></div>
+						<input class='normal' id='store-type-input' type='text' maxlength='30'>
+						<div class='filler-1'></div>
+						<p class='label-text'>Promotion Type</p>
+						<div class='filler-2'></div>
+						<input class='normal' id='promotion-type-input' type='text' maxlength='30'>
+					</div>
+					<div class='right-column'>
+						<p class='label-text'>Description (250 chars max)</p>
+						<div class='filler-2'></div>
+						<textarea class='description-input' placeholder:'Buy 1 buritto get 1 free' maxlength='150'></textarea>
+						<div class='filler-3'></div>
+						<div class='my-location'>
+							<p class='location-text'>Use my current location</p>
+							<input type='checkbox' class='location-checkbox'></input>
+						</div>
+						<div class='filler-2'></div>
+						<p class='or-text'>or</p>
+						<div class='filler-2'></div>
+						<p class='address-text'>Enter address</p>
+						<div class='filler-2'></div>
+						<input class='normal' id='address-input' type='text' maxlength='50'><div class='filler-2'></div>
+						<div class='filler-3'></div>
+						<button class='submit' type='button'>Submit</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='bottom-bar'>
+			<div class='line' id='line-bottom-1'></div>
+			<div class='line' id='line-bottom-2'></div>
+		</div>
 	</body>
 </html>

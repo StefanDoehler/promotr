@@ -1,7 +1,6 @@
 var pg = require('pg');
 
 var con = "postgres://sdoehler:skimboard@localhost:3000/promotr_db";
-console.log("what's up");
 pg.connect(con, function(err, client, done) {
 	if (err) {
 		console.log(err);
@@ -17,5 +16,4 @@ pg.connect(con, function(err, client, done) {
 			}
 		});
 	}
-
 });

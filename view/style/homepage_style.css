@@ -54,6 +54,11 @@ p.vp {
 	vertical-align: middle;
 }
 
+.line {
+	background-color: var(--main-blue);
+	height: 3px;
+}
+
 #line-top {
 	width: 100%;
 }
