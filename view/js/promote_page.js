@@ -29,9 +29,9 @@ $(document).ready(function()
 				params.description = description;
 				params.lat = location.lat;
 				params.lon = location.lon;
+				post(url, params, changeWindow);
 				post(url, params);
-				alert("Your promotion was entered!");
-				window.location = '/';
+				setTimeout(changeWindow, 1500);
 			}
 		}
 		else {
@@ -46,8 +46,7 @@ $(document).ready(function()
 					params.lat = location.lat;
 					params.lon = location.lon;
 					post(url, params);
-					alert("Your promotion was entered!");
-					window.location = '/'
+					setTimeout(changeWindow, 1500);
 				}
 			});
 		}
@@ -107,6 +106,11 @@ function getLatitudeLongitude(callback, address, location, cb) {
             }
         });
     }
+}
+
+function changeWindow() {
+	alert("Your promotion was entered!");
+	window.location = '/';
 }
 
 
