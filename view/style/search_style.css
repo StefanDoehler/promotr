@@ -5,6 +5,13 @@ body {
 	background-color: var(--color-green);
 }
 
+h1.app-name {
+	margin-left: 4px;
+	color: white;
+	font-size: 38px;
+	font-family: 'Indie Flower';
+}
+
 .top-bar {
 	top-margin: 0px;
 	background-color: transparent;
@@ -13,7 +20,7 @@ body {
 }
 
 .line {
-	background-color: var(--main-blue);
+	background-color: var(--color-teal);
 	height: 3px;
 }
 
