@@ -13,7 +13,7 @@ function insert_promotion(params) {
 			client.query(query, function(err, result) {
 				done();
 				if (err) {
-					return 0;
+					console.log(err);
 				}
 				else {
 					var loc_id = result.rows[0].location_id;
@@ -27,15 +27,13 @@ function insert_promotion(params) {
 					client.query(query, function(err, result) {
 						done();
 						if (err) {
-							return 0;
-						}
+							console.log(err);
+						} 
 					});
 				}
 			});
 		}
 	});
-
-	return 1;
 }
 
 module.exports = {
