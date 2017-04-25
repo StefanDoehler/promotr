@@ -34,6 +34,7 @@ function insert_promotion(params) {
 			});
 		}
 	});
+	console.log("successfully added");
 }
 
 module.exports = {
