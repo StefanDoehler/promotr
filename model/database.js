@@ -54,8 +54,12 @@ function get_results() {
 // destroys database and creates new one
 function initialize_db() {
 	pg.defaults.ssl = true;
-	pg.connect(process.env.DATABASE_URL, function(err, client) {
-		if (err) throw err;
+	var db_url = 'postgres://ihoduluunhgcna:999e0ce412b6dea5ffd089320fe24546add865db6e38a7d380d2433130cf3651@ec2-54-235-120-27.compute-1.amazonaws.com:5432/d4d49k50c5p7dl'
+	pg.connect(db_url, function(err, client) {
+		if (err) {
+			console.log(err);
+			return;
+		}
 		console.log('Connected to postgres...');
 
 		var drop_query = 'DROP TABLE IF EXISTS stores, locations';
@@ -74,17 +78,26 @@ function initialize_db() {
 		client
 			.query(drop_query)
 			.on('end', function(err) {
-				if (err) throw err;
+				if (err) {
+					console.log(err);
+					return;
+				}
 				console.log('tables dropped');
 				client
 					.query(create_locations)
 					.on('end', function(err) {
-						if (err) throw err;
+						if (err) {
+							console.log(err);
+							return;
+						}
 						console.log('locations table created');
 						client
 							.query(create_stores)
 							.on('end', function(err) {
-								if (err) throw err;
+								if (err) {
+									console.log(err);
+									return;
+								}
 								console.log('stores table created');
 							});
 					});
