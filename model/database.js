@@ -97,5 +97,5 @@ function initialize_db() {
 module.exports = {
 	insert_promotion: insert_promotion,
 	get_results: get_results,
-	reset_db: reset_db
+	initialize_db: initialize_db
 }
