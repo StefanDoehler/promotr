@@ -5,6 +5,29 @@ body {
 	background-color: var(--color-teal);
 }
 
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow);
+    background: url(http://www.publicdomainpictures.net/pictures/210000/velka/new-york-skyline-1489166079jWc.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;
+    
+    z-index: -5;
+    filter:alpha(opacity=80);
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    opacity: 0.8;
+}
+
 input.normal {
 	border-color: var(--main-orange);
 	border-style: solid;
@@ -19,7 +42,7 @@ input.normal {
 
 h1.app-name {
 	margin-left: 4px;
-	color: white;
+	color: var(--main-orange);
 	font-size: 38px;
 	font-family: 'Indie Flower';
 }
@@ -27,7 +50,7 @@ h1.app-name {
 h2.main-header {
 	text-align: center;
 	margin: auto;
-	color: white;
+	color: var(--main-orange);
 	font-size: 45px;
 	font-family: 'Indie Flower';
 	vertical-align: middle;
@@ -37,14 +60,14 @@ p.label-text {
 	font-size: 24px;
 	font-family: 'Indie Flower';
 	text-align: center;
-	color: white;
+	color: var(--main-orange);
 	margin: auto;
 }
 
 p.location-text {
 	font-size: 24px;
 	font-family: 'Indie Flower';
-	color: white;
+	color: var(--main-orange);
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 25px;
@@ -53,14 +76,14 @@ p.location-text {
 p.or-text {
 	font-size: 16px;
 	font-family: 'Indie Flower';
-	color: white;
+	color: var(--main-orange);
 	text-align: center;
 }
 
 p.address-text {
 	font-size: 24px;
 	font-family: 'Indie Flower';
-	color: white;
+	color: var(--main-orange);
 	vertical-align: middle;
 }
 
@@ -72,7 +95,7 @@ p.address-text {
 }
 
 .line {
-	background-color: var(--main-orange);
+	background-color: white;
 	height: 3px;
 }
 

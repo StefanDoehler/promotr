@@ -1,12 +1,16 @@
 :root{
-    --main-blue: rgb(209,223,210);
-    --main-orange: rgb(253,173,84);
+    --main-blue: #66CCFF;
+    --main-orange: rgb(255,143,0);
     --color-teal: rgb(81,165,186);
-    --color-green: #298F00;
+    --color-green: #71B238; /*#298F00*/
     --c1: #80ADD7;
     --c2: #0ABDA0;
     --c3: #D4DCA9;
     --c4: #BF9D7A;
+    --hp-orange: #F07241;
+    --gray: #65737e;
+    --yellow: #FFD800;
+    --navy: #10375d;
 }
 
 html {
