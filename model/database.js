@@ -51,7 +51,51 @@ function get_results() {
 	});
 }
 
+// destroys database and creates new one
+function initialize_db() {
+	pg.defaults.ssl = true;
+	pg.connect(process.env.DATABASE_URL, function(err, client) {
+		if (err) throw err;
+		console.log('Connected to postgres...');
+
+		var drop_query = 'DROP TABLE IF EXISTS stores, locations';
+		var create_locations = 'CREATE TABLE locations (' +
+		    'location_id bigserial primary key, ' +
+		    'latitude float NOT NULL, ' +
+		    'longitude float NOT NULL);';
+		var create_stores = 'CREATE TABLE stores (' +
+		    'store_id bigserial primary key, ' +
+		    'store_name varchar(30) NOT NULL, ' +
+		    'business_type varchar(20) NOT NULL, ' +
+		    'promotion_type varchar(20) NOT NULL, ' +
+		    'description varchar(150) NOT NULL, ' +
+		    'store_location integer REFERENCES locations(location_id));';
+
+		client
+			.query(drop_query)
+			.on('end', function(err) {
+				if (err) throw err;
+				console.log('tables dropped');
+				client
+					.query(create_locations)
+					.on('end', function(err) {
+						if (err) throw err;
+						console.log('locations table created');
+						client
+							.query(create_stores)
+							.on('end', function(err) {
+								if (err) throw err;
+								console.log('stores table created');
+							});
+					});
+			});
+
+		console.log('db initialization complete');
+	});
+}
+
 module.exports = {
 	insert_promotion: insert_promotion,
-	get_results: get_results
+	get_results: get_results,
+	reset_db: reset_db
 }

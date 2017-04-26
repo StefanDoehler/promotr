@@ -21,6 +21,9 @@ app.use(express.static(__dirname + '/view/js'));
 // homepage
 app.get('/', navigateController.homepage);
 
+// initialize db
+app.post('/setup', navigateController.setup_db);
+
 // promote page
 app.get('/promote', navigateController.promote);
 
