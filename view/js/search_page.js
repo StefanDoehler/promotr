@@ -20,7 +20,7 @@ $(document).ready(function()
 			var l = result.length;
 			var cell_num = 0;
 			// blank cell if odd number of promotions
-			var dummy = {store_name: '', store_type: '', description: ''};
+			var dummy = {store_name: '', promotion_type: '', description: ''};
 			for (var i = 0; i < l; i += 2) {
 				var cell1 = createCell(result[i], cell_num);
 				cell_num += 1;
