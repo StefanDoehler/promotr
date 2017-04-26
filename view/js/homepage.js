@@ -8,13 +8,13 @@ $(document).ready(function() {
 	});
 	$('.initialize-db').click(function() {
 		var url = window.location.href + 'setup'
-		post(url);
+		get(url);
 	})
 });
 
-function post(path) 
+function get(path) 
 {
-    var method = 'post'; 
+    var method = 'get'; 
     var form = document.createElement('form');
     form.setAttribute('method', method);
     form.setAttribute('action', path);

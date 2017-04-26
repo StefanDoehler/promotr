@@ -2,7 +2,29 @@ body {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	background-color: var(--main-orange);
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--main-orange);
+    /*background: url(https://suggestionofmotion.com/wp-content/uploads/JPN_Tokyo_Yanaka_019_Down-the-Alley.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100%;*/
+    
+    z-index: -5;
+    filter:alpha(opacity=80);
+    /*-webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+    opacity: 0.5;*/
 }
 
 h1.app-name {

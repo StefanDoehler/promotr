@@ -85,3 +85,108 @@ h2.main-header {
 	display: table-cell;
 	vertical-align: middle;
 }
+
+.scroll-body {
+	height: 75%;
+	width: 80%;
+	margin: auto;
+	vertical-align: middle;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	background-color: transparent;
+}
+
+#scroll-style::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+#scroll-style::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#scroll-style::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+
+.results-table {
+	height: 100%;
+	width: 100%;
+	/*border-radius: 10px;
+	border-style: solid;
+	border-color: var(--color-teal);
+	border-width: 4px;*/
+}
+
+.td-class {
+	padding: 10px;
+}
+
+.table-cell1 {
+  	position: relative;
+	height: 200px;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--c1);
+}
+
+.table-cell2 {
+	position: relative;
+	height: 200px;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--c2);
+}
+
+.table-cell3 {
+	position: relative;
+	height: 200px;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--c3);
+}
+
+.table-cell4 {
+	position: relative;
+	height: 200px;
+	margin: auto;
+	border-radius: 10px;
+	background-color: var(--c4);
+}
+
+.store-name {
+	position: absolute;
+	bottom: 40px;
+	left: 20px;
+	font-size: 30px;
+	color: #708090;
+	float: left;
+	font-family: 'Indie Flower';
+}
+
+.ptype {
+	position: absolute;
+	right: 20px;
+	bottom: 40px;
+	font-size: 24px;
+	color: #708090;
+	float: right;
+	font-family: 'Indie Flower';
+}
+
+.desc {
+	position: absolute;
+	top: 30px;
+	left: 20px;
+	font-size: 40px;
+	color: white;
+	float: left;
+	font-family: 'Indie Flower';
+}
